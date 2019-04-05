@@ -1,17 +1,17 @@
 /**
   Represent a date
  */
-public class Date{
+public class Date implements Comparable{
     private int y,m,d;
 
     /**
       @return  a negative integer, zero, or a positive integer
-      depending on whether this Date is closer, 
+      depending on whether this Date is closer,
       equidistant, or farther from January 1, 0 than the Date referred
       to by the parameter.
      */
-    public int compareTo( Date otherDate) {
-        // Date otherDate = otherObj;
+    public int compareTo( Object otherObj) {
+        Date otherDate = (Date) otherObj;
         if (y > otherDate.y) {
             return 1;
         }
@@ -38,7 +38,7 @@ public class Date{
             }
         }
     }
-    
+
 
     // -------- previously-written code --------
     // constructor
@@ -47,7 +47,7 @@ public class Date{
         this.m = m;
         this.d = d;
     }
-    
+
     /**
       @return a string representation of this instance
      */
