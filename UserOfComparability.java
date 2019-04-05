@@ -25,8 +25,29 @@ public class UserOfComparability {
                           , new Point( 100., 2.), "negative int");
         System.out.println( "---- end of Point comparisons ----");
         
-        // System.out.println( System.lineSeparator()
-                          // + "Date comparisons");
+        
+        System.out.println( System.lineSeparator()
+                          + "Date comparisons");
+
+        // Date vs. itself
+        Date d0 = new Date( 2002, 7, 4);
+        reportRelationship( "Date vs. itself", d0, d0, "0");
+
+        // Date vs. earlier date
+        reportRelationship( "Date vs. earlier date", d0
+                          , new Date( 1967, 6, 20), "positive int");
+
+        // Date vs. later date
+        reportRelationship( "Date vs. later date", d0
+                          , new Date( 2019, 4, 4), "negative int");
+        System.out.println( "---- end of Date comparisons ----");
+
+        // // IncomparableDog vs. IncomparableDog
+        // IncomparableDog id0 = new IncomparableDog();
+        // reportRelationship( "IncomparableDog vs. itself", id0, id0, "0");
+
+        // // Point vs. Date
+        // reportRelationship("Point vs. Date", p0, d0, "???");
     }
 
 
@@ -54,4 +75,5 @@ public class UserOfComparability {
           + " ...expecting " + expect
           + System.lineSeparator());
      }
+
 }

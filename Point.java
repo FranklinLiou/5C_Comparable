@@ -8,7 +8,7 @@ public class Point{
     /**
       @return  a negative integer, zero, or a positive integer
       depending on whether this Point is closer, 
-      equidistant, or farther than the Point referred to
+      equidistant, or farther from the origin than the Point referred to
       by the parameter.
      */
     public int compareTo( Point otherObj){
